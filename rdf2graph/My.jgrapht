@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ll="http://www.jgrapht.org">
+  <ll:Vertex name="Museum"/>
+  <ll:Vertex name="Musée Le Louvre"/>
+  <ll:Vertex name="Painting"/>
+  <ll:Vertex name="Mona Lisa"/>
+  <ll:Vertex name="Raft of the Medusa"/>
+  <ll:Vertex name="Person"/>
+  <ll:Vertex name="Théodore Géricault"/>
+  <ll:Vertex name="Leonardo Da Vinci"/>
+  <ll:Vertex name="Bob"/>
+  <ll:Vertex name="Alice"/>
+  <ll:Vertex name="Statue"/>
+  <ll:Vertex name="is a friend of"/>
+  <ll:Vertex name="is interested in"/>
+  <ll:Vertex name="is painted by"/>
+  <ll:Vertex name="owns the painting"/>
+  <ll:Vertex name="works for"/>
+  <ll:Edge from="/1" to="/0" relation="type"/>
+  <ll:Edge from="/3" to="/2" relation="type"/>
+  <ll:Edge from="/4" to="/2" relation="type"/>
+  <ll:Edge from="/6" to="/5" relation="type"/>
+  <ll:Edge from="/7" to="/5" relation="type"/>
+  <ll:Edge from="/8" to="/5" relation="type"/>
+  <ll:Edge from="/9" to="/5" relation="type"/>
+  <ll:Edge from="/1" to="/3" relation="owns the painting"/>
+  <ll:Edge from="/1" to="/4" relation="owns the painting"/>
+  <ll:Edge from="/3" to="/7" relation="is painted by"/>
+  <ll:Edge from="/4" to="/6" relation="is painted by"/>
+  <ll:Edge from="/8" to="/3" relation="is interested in"/>
+  <ll:Edge from="/8" to="/9" relation="is a friend of"/>
+  <ll:Edge from="/9" to="/1" relation="works for"/>
+</xmi:XMI>

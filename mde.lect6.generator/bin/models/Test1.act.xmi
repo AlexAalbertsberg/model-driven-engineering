@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Action:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Action="Action" xsi:schemaLocation = "Action Action.ecore">
+  <actions xsi:type="Action:Start" location="3:3-3:24" label="start" next="//@actions.1"/>
+  <actions xsi:type="Action:VariableDecl" location="4:3-4:23" label="fib1" name="a" next="//@actions.2"/>
+  <actions xsi:type="Action:VariableDecl" location="5:3-5:22" label="fib2" name="b" next="//@actions.3"/>
+  <actions xsi:type="Action:VariableDecl" location="6:3-6:25" label="res" name="r" next="//@actions.4"/>
+  <actions xsi:type="Action:VariableDecl" location="7:3-7:28" label="counter" name="n" next="//@actions.5"/>
+  <actions xsi:type="Action:VariableDecl" location="8:3-8:31" label="number" name="fn" next="//@actions.6"/>
+  <actions xsi:type="Action:Assignment" label="init_fib1" name="a" next="//@actions.7">
+    <value xsi:type="Action:Constant" value="0"/>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="init_fib2" name="b" next="//@actions.8">
+    <value xsi:type="Action:Constant" value="1"/>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="init_counter" name="n" next="//@actions.9">
+    <value xsi:type="Action:Constant" value="1"/>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="init_number" name="fn" next="//@actions.10">
+    <value xsi:type="Action:Constant" value="7"/>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="init_result" name="r" next="//@actions.11">
+    <value xsi:type="Action:Constant" value="1"/>
+  </actions>
+  <actions xsi:type="Action:Condition" label="check" yes="//@actions.12" no="//@actions.16">
+    <expression xsi:type="Action:LessExp">
+      <left xsi:type="Action:Variable" name="n"/>
+      <right xsi:type="Action:Variable" name="fn"/>
+    </expression>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="iterate" name="a" next="//@actions.13">
+    <value xsi:type="Action:Variable" name="b"/>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="iterate1" name="b" next="//@actions.14">
+    <value xsi:type="Action:Variable" name="r"/>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="iterate2" name="r" next="//@actions.15">
+    <value xsi:type="Action:OperationPlus">
+      <left xsi:type="Action:Variable" name="a"/>
+      <right xsi:type="Action:Variable" name="b"/>
+    </value>
+  </actions>
+  <actions xsi:type="Action:Assignment" label="iterate3" name="n" next="//@actions.11">
+    <value xsi:type="Action:OperationPlus">
+      <left xsi:type="Action:Variable" name="n"/>
+      <right xsi:type="Action:Constant" value="1"/>
+    </value>
+  </actions>
+  <actions xsi:type="Action:Stop" label="end"/>
+</Action:Model>

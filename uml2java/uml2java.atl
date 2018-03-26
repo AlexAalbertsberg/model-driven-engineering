@@ -1,0 +1,81 @@
+module uml2java;
+
+create OUT : Java from IN : UML;
+
+rule UMLPackage2JavaPackage
+{
+	from
+		c : UML!Package
+	to
+		out : Java!Package(
+			name <- c.name	
+		)
+}
+
+rule UMLClass2JavaClass
+{
+	from
+		c : UML!Class
+	to
+		out : Java!Class(
+			name <- c.name,
+			superclass <- c.extend,
+			owner <- c.namespace,
+			isPublic <- true,
+			isStatic <- false,
+			method <- c.attribute->collect(test | thisModule.resolveTemp(test, 'accessor')),
+			method <- c.attribute->collect(test | thisModule.resolveTemp(test, 'mutator'))
+		)
+		
+}
+
+rule UMLPrimitiveTypes2JavaPrimitiveTypes
+{
+	from 
+		c : UML!PrimitiveDataType
+	to
+		out : Java!PrimitiveType(
+			name <- c.name
+		)
+}
+
+rule UMLAttributes2JavaFields
+{
+	from
+		c : UML!Attribute
+	to
+		out : Java!Field(
+			name <- c.name,
+			owner <- c.owner,
+			type <- c.type,
+			isPrivate <- true
+		),
+		
+		returnStatement : Java!Return(
+			fieldName <- c.name,
+			objectId <- 'this'
+		),
+		accessor : Java!Method(
+			name <- 'get' + c.name,
+			isPublic <- true,
+			returnType <- c.type,
+			statements <- returnStatement
+		),
+		
+		
+		parameter : Java!Parameter(
+			name <- c.name,
+			type <- c.type
+		),
+		assignStatement : Java!Assignment(
+			fieldName <- c.name,
+			variableExpr <- parameter.name,
+			objectId <- 'this'
+		),
+		mutator : Java!Method(
+			name <- 'set' + c.name,
+			isPublic <- true,
+			parameters <- parameter,
+			statements <- assignStatement
+		)		
+}

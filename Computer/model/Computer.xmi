@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comp:Computer
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:comp="??"
+    xsi:schemaLocation="?? Computer.ecore">
+  <motherboard
+      name="Gigabyte GA-Z68X-UD3H-B3"
+      CPU_socket="LGA1155"
+      numPS2Ports="2"
+      numUSBPorts="3"
+      power_consumption="1"/>
+  <processor
+      name="Intel i7-2600k"
+      CPU_socket="LGA1155"
+      numCores="4"
+      clockSpeed="3400"
+      power_consumption="1"/>
+  <graphicsCards
+      name="MSI Radeon R9 390"
+      memory_size="8"
+      core_clock="975"
+      memory_clock="1200"
+      power_consumption="1"/>
+  <graphicsCards
+      name="MSI Radeon R9 390"
+      memory_size="8"
+      core_clock="975"
+      memory_clock="1200"
+      power_consumption="1"/>
+  <memory name="Corsair Vengeance LP"
+      memory_size="4"
+      memory_clock_speed="1600"
+      power_consumption="1"/>
+  <memory name="Corsair Vengeance LP"
+      memory_size="4"
+      memory_clock_speed="1600"
+      power_consumption="1"/>
+  <hardDisks
+      name="Samsung SH-222AB"
+      capacity="1000"
+      read_speed="48"
+      write_speed="16"
+      power_consumption="1"/>
+  <hardDisks
+      name="Crucial m4"
+      isSSD="true"
+      capacity="128"
+      read_speed="500"
+      write_speed="175"
+      power_consumption="1"/>
+  <screens name="Iiyama ProLite E2473HDS-B1"
+      max_res="1920x1080"
+      response_time="2"
+      max_freq="75"
+      length="521"
+      width="418"
+      height="293"
+      power_consumption="1"/>
+  <screens name="Iiyama ProLite E2473HDS-B1"
+      max_res="1920x1080"
+      response_time="2"
+      max_freq="75"
+      length="521"
+      width="418"
+      height="293"
+      power_consumption="1"/>
+  <mouse name="Razer Naga"
+      numUSB="1"
+      numPS2="0"
+      dpi="5600"
+      power_consumption="1"/>
+  <keyboard
+      name="Logitech Gaming G510"
+      numUSB="1"
+      numPS2="0"
+      switch_type="Rubber Dome"
+      connection_type=""
+      power_consumption="1"/>
+  <powerSupply
+      name="Cooler Master GX RS-750-ACAA-D3"
+      capacity="750"
+      power_consumption="0"/>
+</comp:Computer>

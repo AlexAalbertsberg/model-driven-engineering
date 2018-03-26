@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="value" nsURI="http://www.example.org/rdf" nsPrefix="rdf">
+  <eClassifiers xsi:type="ecore:EClass" name="RDF">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" upperBound="-1"
+        eType="#//Resource" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IRI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"
+        eOpposite="#//Type/resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comment" eType="#//Comment"
+        containment="true" eOpposite="#//Comment/resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Label"
+        containment="true" eOpposite="#//Label/resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+        eType="#//Value" containment="true" eOpposite="#//Value/sourceresource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seealso" upperBound="-1"
+        eType="#//SeeAlso" containment="true" eOpposite="#//SeeAlso/sourceresource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="member" upperBound="-1"
+        eType="#//Member" containment="true" eOpposite="#//Member/sourceresource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isdefinedby" upperBound="-1"
+        eType="#//IsDefinedBy" containment="true" eOpposite="#//IsDefinedBy/sourceresource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subclassof" upperBound="-1"
+        eType="#//SubClassOf" containment="true" eOpposite="#//SubClassOf/sourceclass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subpropertyof" upperBound="-1"
+        eType="#//SubPropertyOf" containment="true" eOpposite="#//SubPropertyOf/sourceproperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//Domain"
+        containment="true" eOpposite="#//Domain/property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//Range"
+        containment="true" eOpposite="#//Range/property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XMLLiteral" eSuperTypes="#//Literal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LangString" eSuperTypes="#//Literal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Datatype" abstract="true" eSuperTypes="#//Literal">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="langstring" eType="#//LangString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="html" eType="#//HTML"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xmlliteral" eType="#//XMLLiteral"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HTML" eSuperTypes="#//Literal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rest" eType="#//Rest" containment="true"
+        eOpposite="#//Rest/sourcelist"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="first" eType="#//First"
+        containment="true" eOpposite="#//First/list"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//Resource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Alt" eSuperTypes="#//Container"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bag" eSuperTypes="#//Container"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Seq" eSuperTypes="#//Container"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerMembershipProperty" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubPropertyOf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
+        eType="#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceproperty" lowerBound="1"
+        eType="#//Property" eOpposite="#//Property/subpropertyof"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rest">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcelist" lowerBound="1"
+        eType="#//List" eOpposite="#//List/rest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" lowerBound="1" eType="#//List"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/label"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="literal" lowerBound="1"
+        eType="#//Literal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Member">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceresource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/member"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Value">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceresource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/value"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SeeAlso">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceresource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/seealso"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IsDefinedBy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceresource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/isdefinedby"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="First">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" lowerBound="1" eType="#//List"
+        eOpposite="#//List/first"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/comment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="literal" lowerBound="1"
+        eType="#//Literal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Range">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
+        eType="#//Property" eOpposite="#//Property/range"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
+        eType="#//Property" eOpposite="#//Property/domain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubClassOf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceclass" lowerBound="1"
+        eType="#//Class" eOpposite="#//Class/subclassof"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
+  </eClassifiers>
+</ecore:EPackage>

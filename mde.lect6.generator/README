@@ -1,0 +1,11 @@
+In order to make this project work I installed the following Eclipse plugins:
+- Xpand SDK
+- MWE SDK
+
+Furthermore, when I started the original project I got a error that interface
+org/eclipse/core/resources/IResource could not be found. to solve this I added 
+the following plugin by hand to the list of 'plug-ins required' in 
+plugin.xml:
+- org.eclipse.core.resources
+
+The transformation is working properly again now.

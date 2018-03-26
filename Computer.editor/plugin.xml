@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Computer -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="computer.presentation.ComputerModelWizardID"
+            name="%_UI_ComputerModelWizard_label"
+            class="computer.presentation.ComputerModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ComputerModelFile.gif">
+         <description>%_UI_ComputerModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Computer -->
+      <editor
+            id="computer.presentation.ComputerEditorID"
+            name="%_UI_ComputerEditor_label"
+            icon="icons/full/obj16/ComputerModelFile.gif"
+            extensions="computer"
+            class="computer.presentation.ComputerEditor"
+            contributorClass="computer.presentation.ComputerActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

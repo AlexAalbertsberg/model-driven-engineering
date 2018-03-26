@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Action -->
+      <package
+            uri="Action"
+            class="mde.lect6.action.Action.ActionPackage"
+            genModel="model/Action.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Action -->
+      <package
+            uri="Action-PrimitiveTypes"
+            class="mde.lect6.action.PrimitiveTypes.PrimitiveTypesPackage"
+            genModel="model/Action.genmodel"/>
+   </extension>
+</plugin>

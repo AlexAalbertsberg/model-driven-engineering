@@ -1,0 +1,96 @@
+module uml2java_flatten;
+create OUT : Java from IN : UML;
+
+helper def : getAllSuperClasses(class : UML!Class) : Sequence(UML!Class) =
+	class.extend -> collect(superClass | thisModule.getAllSuperClasses(superClass))->flatten()->union(Sequence{class});
+
+
+helper def : getAllAttributes(class : UML!Class): Sequence(UML!Attribute) =
+	-- Collect all super classes, then collect all of their attributes.
+	thisModule.getAllSuperClasses(class)->collect(superClass | superClass.attribute)->flatten();
+
+rule UMLClassToJavaClassFlatten
+{
+	from
+		c : UML!Class(
+			c.extendedBy->size() = 0	
+		)	
+	using 
+	{
+		attributes : Sequence(UML!Attribute) = thisModule.getAllAttributes(c);
+		fields : Sequence(Java!Field) = attributes->collect(attr | thisModule.UMLAttribute2JavaField(attr));
+		accessors : Sequence(Java!Method) = attributes->collect(attr | thisModule.UMLAttribute2JavaAccessor(attr));
+		mutators : Sequence(Java!Method) = attributes->collect(attr | thisModule.UMLAttribute2JavaMutator(attr));
+	}
+	to
+		out : Java!Class(
+			name <- c.name,
+			owner <- c.namespace,
+			field <- fields,
+			method <- accessors -> union(mutators)
+		)
+}
+
+lazy rule UMLAttribute2JavaField
+{
+	from
+		attr : UML!Attribute
+	to
+		out : Java!Field(
+			name <- attr.name,
+			type <- attr.type,
+			isPrivate <- true
+		) 
+}
+
+lazy rule UMLAttribute2JavaAccessor
+{
+	from 
+		attr : UML!Attribute
+	to
+		accessor : Java!Method(
+			name <- 'get' + attr.name,
+			isPublic <- true,
+			statements <- returnStatement
+		),
+		returnStatement : Java!Return(
+			fieldName <- attr.name,
+			objectId <- 'this'
+		)	
+		
+}
+
+lazy rule UMLAttribute2JavaMutator
+{
+	from	
+		attr : UML!Attribute
+	to
+		mutator : Java!Method(
+			name <- 'set' + attr.name,
+			isPublic <- true,
+			parameters <- parameter,
+			statements <- assignStatement
+		),
+		parameter : Java!Parameter(
+			name <- attr.name,
+			type <- attr.type
+		),
+		assignStatement : Java!Assignment(
+			fieldName <- attr.name,
+			variableExpr <- parameter.name,
+			objectId <- 'this'
+		)
+			
+}
+
+rule UMLPackageToJavaPackage
+{
+	from
+		package : UML!Package
+	to
+		out : Java!Package(
+			name <- package.name,
+			content <- package.elements->select(class | class.oclIsTypeOf(UML!Class))
+										->select(class | class.extendedBy->size() = 0)
+		)
+}

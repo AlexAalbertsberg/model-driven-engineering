@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ll:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ll="jgrapht" xsi:schemaLocation = "jgrapht jgrapht.ecore">
+  <vertices name="Museum"/>
+  <vertices name="Musee Le Louvre"/>
+  <vertices name="Painting"/>
+  <vertices name="Mona Lisa"/>
+  <vertices name="Raft of the Medusa"/>
+  <vertices name="Person"/>
+  <vertices name="Theodore Gericault"/>
+  <vertices name="Leonardo Da Vinci"/>
+  <vertices name="Bob"/>
+  <vertices name="Alice"/>
+  <vertices name="Statue"/>
+  <vertices name="is a friend of"/>
+  <vertices name="is interested in"/>
+  <vertices name="is painted by"/>
+  <vertices name="owns the painting"/>
+  <vertices name="works for"/>
+  <edges from="//@vertices.1" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.3" to="//@vertices.2" relation="type"/>
+  <edges from="//@vertices.4" to="//@vertices.2" relation="type"/>
+  <edges from="//@vertices.6" to="//@vertices.5" relation="type"/>
+  <edges from="//@vertices.7" to="//@vertices.5" relation="type"/>
+  <edges from="//@vertices.8" to="//@vertices.5" relation="type"/>
+  <edges from="//@vertices.9" to="//@vertices.5" relation="type"/>
+  <edges from="//@vertices.1" to="//@vertices.3" relation="owns the painting"/>
+  <edges from="//@vertices.1" to="//@vertices.4" relation="owns the painting"/>
+  <edges from="//@vertices.3" to="//@vertices.7" relation="is painted by"/>
+  <edges from="//@vertices.4" to="//@vertices.6" relation="is painted by"/>
+  <edges from="//@vertices.8" to="//@vertices.3" relation="is interested in"/>
+  <edges from="//@vertices.8" to="//@vertices.9" relation="is a friend of"/>
+  <edges from="//@vertices.9" to="//@vertices.1" relation="works for"/>
+</ll:Graph>

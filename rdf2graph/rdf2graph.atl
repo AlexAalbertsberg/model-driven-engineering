@@ -1,0 +1,194 @@
+module rdf2graph;
+
+create OUT : JGraphT from IN : RDF;
+
+rule Resource2Vertex
+{
+	from
+		i : RDF!Resource (i.oclIsTypeOf(RDF!Statement) = false)
+	to
+		vert : JGraphT!Vertex(
+			name <- i.ID	
+		)
+}
+
+rule SubClassOf2Edge
+{
+	from 
+		i : RDF!SubClassOf
+	to
+		edge : JGraphT!Edge(
+			relation <- 'subClassOf',
+			from <- thisModule.resolveTemp(i.sourceclass, 'vert'),
+			to <- thisModule.resolveTemp(i.class, 'vert')
+		)
+}
+
+rule SubPropertyOf2Edge
+{
+	from
+		i : RDF!SubPropertyOf
+	to
+		edge : JGraphT!Edge(
+			relation <- 'subPropertyOf',
+			from <- thisModule.resolveTemp(i.sourceproperty, 'vert'),
+			to <- thisModule.resolveTemp(i.property, 'vert')
+		)
+}
+
+rule SeeAlso2Edge
+{
+	from
+		i : RDF!SeeAlso
+	to	
+		edge : JGraphT!Edge(
+			relation <- 'seeAlso',
+			from <- thisModule.resolveTemp(i.sourceresource, 'vert'),
+			to <- thisModule.resolveTemp(i.resource, 'vert')
+		)
+}
+
+rule Value2Edge
+{
+	from
+		i : RDF!Value
+	to	
+		edge : JGraphT!Edge(
+			relation <- 'value',
+			from <- thisModule.resolveTemp(i.sourceresource, 'vert'),
+			to <- thisModule.resolveTemp(i.resource, 'vert')
+		)
+}
+
+rule Member2Edge
+{
+	from
+		i : RDF!Member
+	to	
+		edge : JGraphT!Edge(
+			relation <- 'member',
+			from <- thisModule.resolveTemp(i.sourceresource, 'vert'),
+			to <- thisModule.resolveTemp(i.resource, 'vert')
+		)
+}
+
+rule IsDefinedBy2Edge
+{
+	from
+		i : RDF!IsDefinedBy
+	to	
+		edge : JGraphT!Edge(
+			relation <- 'isDefinedBy',
+			from <- thisModule.resolveTemp(i.sourceresource, 'vert'),
+			to <- thisModule.resolveTemp(i.resource, 'vert')
+		)
+}
+
+rule Type2Edge
+{
+	from
+		i : RDF!Type
+	to	
+		edge : JGraphT!Edge(
+			relation <- 'type',
+			from <- thisModule.resolveTemp(i.resource, 'vert'),
+			to <- thisModule.resolveTemp(i.class, 'vert')
+		)
+}
+
+rule Subject2Edge
+{
+	from
+		i : RDF!SeeAlso
+	to	
+		edge : JGraphT!Edge(
+			relation <- 'seeAlso',
+			from <- thisModule.resolveTemp(i.sourceresource, 'vert'),
+			to <- thisModule.resolveTemp(i.resource, 'vert')
+		)
+}
+
+rule Range2Edge
+{
+	from
+		i : RDF!Range
+	to
+		edge : JGraphT!Edge(
+			relation <- 'range',
+			from <- thisModule.resolveTemp(i.property, 'vert'),
+			to <- thisModule.resolveTemp(i.class, 'vert')
+		)
+}
+
+rule Domain2Edge
+{
+	from
+		i : RDF!Domain
+	to
+		edge : JGraphT!Edge(
+			relation <- 'domain',
+			from <- thisModule.resolveTemp(i.property, 'vert'),
+			to <- thisModule.resolveTemp(i.class, 'vert')
+		)
+}
+
+rule Label2Edge
+{
+	from
+		i : RDF!Label
+	to
+		edge : JGraphT!Edge(
+			relation <- 'label',
+			from <- thisModule.resolveTemp(i.resource, 'vert'),
+			to <- thisModule.resolveTemp(i.literal, 'vert')
+		)
+}
+
+rule Comment2Edge
+{
+	from
+		i : RDF!Comment
+	to
+		edge : JGraphT!Edge(
+			relation <- 'comment',
+			from <- thisModule.resolveTemp(i.resource, 'vert'),
+			to <- thisModule.resolveTemp(i.literal, 'vert')
+		)
+}
+
+rule First2Edge
+{
+	from
+		i : RDF!First
+	to
+		edge : JGraphT!Edge(
+			relation <- 'first',
+			from <- thisModule.resolveTemp(i.list, 'vert'),
+			to <- thisModule.resolveTemp(i.resource, 'vert')
+		)
+}
+
+rule Rest2Edge
+{
+	from
+		i : RDF!Rest
+	to
+		edge : JGraphT!Edge(
+			relation <- 'rest',
+			from <- thisModule.resolveTemp(i.sourcelist, 'vert'),
+			to <- thisModule.resolveTemp(i.list, 'vert')
+		)
+}
+
+
+rule Statement2VEV
+{
+	from
+		i : RDF!Statement
+	to
+		edge : JGraphT!Edge(
+			relation <- i.predicate.ID,
+			from <- thisModule.resolveTemp(i.subject,'vert'),
+			to <- thisModule.resolveTemp(i.object, 'vert')
+		)
+}

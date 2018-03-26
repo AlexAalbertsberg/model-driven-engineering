@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<UML:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UML="uri:UML.ecore" xsi:schemaLocation="uri:UML.ecore UML.ecore#/0" name="Sample">
+  <elements xsi:type="UML:Class" name="Person" extendedBy="//@elements.1 //@elements.2" reverse="//@elements.7">
+    <attribute name="name" type="//@elements.9"/>
+  </elements>
+  <elements xsi:type="UML:Class" name="Student" extend="//@elements.0" reverse="//@elements.8"/>
+  <elements xsi:type="UML:Class" name="Employee" extend="//@elements.0">
+    <attribute name="employer" type="//@elements.5"/>
+  </elements>
+  <elements xsi:type="UML:Class" name="Organization" extendedBy="//@elements.4 //@elements.5">
+    <attribute name="name" type="//@elements.9"/>
+    <attribute name="address" type="//@elements.6"/>
+  </elements>
+  <elements xsi:type="UML:Class" name="Faculty" extend="//@elements.3" forward="//@elements.8">
+    <attribute name="university" type="//@elements.9"/>
+  </elements>
+  <elements xsi:type="UML:Class" name="Company" extend="//@elements.3">
+    <attribute name="type" type="//@elements.9"/>
+  </elements>
+  <elements xsi:type="UML:Class" name="Address" forward="//@elements.7">
+    <attribute name="city" type="//@elements.9"/>
+    <attribute name="street" type="//@elements.9"/>
+    <attribute name="postcode" type="//@elements.9"/>
+  </elements>
+  <elements xsi:type="UML:Association" name="livesAt" source="//@elements.0" destination="//@elements.6" sourceRole="inhabitant" destinationRole="address" sourceMultiplicity="*" destinationMultiplicity="1"/>
+  <elements xsi:type="UML:Association" name="studiesIn" source="//@elements.1" destination="//@elements.4" sourceRole="students" destinationRole="faculty" sourceMultiplicity="*" destinationMultiplicity="1"/>
+  <elements xsi:type="UML:PrimitiveDataType" name="String"/>
+</UML:Package>

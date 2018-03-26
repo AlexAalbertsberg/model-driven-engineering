@@ -1,0 +1,20 @@
+
+Model {
+  start : Start -> fib1
+  fib1 : var a -> fib2
+  fib2 : var b -> res
+  res : var r -> counter
+  counter : var n -> number
+  number : var fn -> init_fib1
+  init_fib1 : a = 0 -> init_fib2
+  init_fib2 : b = 1 -> init_counter
+  init_counter : n =  1 -> init_number
+  init_number : fn = 7 -> init_result
+  init_result : r = 1 ->  check
+  check : if n < fn then iterate else end endif
+  iterate : a = b ->iterate1
+  iterate1 : b = r -> iterate2
+  iterate2 : r = a+b ->iterate3
+  iterate3 : n = n + 1 -> check
+  end : Stop
+ } 

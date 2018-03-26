@@ -1,0 +1,108 @@
+«IMPORT Action»
+
+
+«DEFINE main FOR Model»
+	«FILE "/mde/lect6/action/Action.java"»
+		package mde.lect6.action;
+		
+		import java.util.*;
+	
+		public class Action {
+			«EXPAND table FOREACH actions.typeSelect(Action::Start)»
+			«EXPAND vd FOREACH actions.typeSelect(Action::VariableDecl)»
+						
+			private static void initialize()
+			{
+				«EXPAND fields FOREACH actions.typeSelect(Action::VariableDecl)»
+			}
+						
+			private void end(){
+				«EXPAND printFields FOREACH actions.typeSelect(Action::VariableDecl)»
+			}
+			
+			«EXPAND assignmentMethod FOREACH actions.typeSelect(Action::Assignment)»
+			
+			«EXPAND start FOREACH actions.typeSelect(Action::Start)»
+
+			«EXPAND ifExpr FOREACH actions.typeSelect(Action::Condition)»
+
+			public static void main(String[] args){
+				initialize();
+				(new Action()).start();
+			}
+		}
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE table FOR Start»
+	private static Hashtable<String, Integer> table = new Hashtable<String, Integer>();
+«ENDDEFINE»
+
+«DEFINE fields FOR VariableDecl»
+	if(table.containsKey("«name»"))
+	{
+		try{ throw new Exception(); }
+		catch(Exception e) {e.printStackTrace();}
+	}
+	else table.put("«name»",0);
+«ENDDEFINE»
+
+«DEFINE printFields FOR VariableDecl»
+	System.out.println(table.get("«name»"));
+«ENDDEFINE»
+
+«DEFINE vd  FOR VariableDecl»
+	private void «label»() {
+		«next.label»();
+	}
+«ENDDEFINE»
+
+«DEFINE assignmentMethod FOR Assignment»
+	private void «label»() {
+		if(table.containsKey("«name»"))
+		{
+			table.put("«name»",«EXPAND intExpr FOR value»);
+		}
+		else
+		{
+			try { throw new Exception();}
+			catch(Exception e){e.printStackTrace();}
+			
+		}
+		«next.label»();
+	}
+«ENDDEFINE»
+
+«DEFINE start  FOR Start»
+	public void «label»() {
+		«next.label»();
+	}
+«ENDDEFINE»
+
+«DEFINE intExpr  FOR IntegerExp»
+«ENDDEFINE»
+
+«DEFINE intExpr  FOR IntOperand»
+«ENDDEFINE»
+
+«DEFINE intExpr  FOR Constant»«value»«ENDDEFINE»
+
+«DEFINE intExpr  FOR Variable»table.get("«name»")«ENDDEFINE»
+
+«DEFINE intExpr  FOR OperationPlus»«EXPAND intExpr FOR left» + «EXPAND intExpr FOR right»«ENDDEFINE»
+
+«DEFINE ifExpr  FOR Condition»
+	private void «label»() {
+		if(«EXPAND condition FOR expression»)
+		     «yes.label»();
+		else	«no.label»();
+	}
+«ENDDEFINE»
+
+«DEFINE condition  FOR BooleanExp»
+«ENDDEFINE»
+
+«DEFINE condition  FOR LessExp»
+	«EXPAND intExpr FOR left» < «EXPAND intExpr FOR right»
+«ENDDEFINE»
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.adsa.emf.sql.model/src" modelPluginID="com.adsa.emf.sql.model"
+    modelName="Model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Model" basePackage="com.adsa.emf.sql.model" disposableProviderFactory="true"
+      ecorePackage="model.ecore#/">
+    <genClasses ecoreClass="model.ecore#//Select">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Select/column"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Select/from"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Select/where"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Select/union"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Column/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Column/columnalias"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//From">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//From/table"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Table">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Table/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Table/tablealias"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Where">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Where/condition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//BooleanOperation">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//BooleanOperation/condition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//ComparisonOperator"/>
+    <genClasses ecoreClass="model.ecore#//Union">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Union/select"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Equals"/>
+    <genClasses ecoreClass="model.ecore#//GreaterThan"/>
+    <genClasses ecoreClass="model.ecore#//LessThan"/>
+    <genClasses ecoreClass="model.ecore#//NotEquals"/>
+    <genClasses ecoreClass="model.ecore#//And"/>
+    <genClasses ecoreClass="model.ecore#//Or"/>
+    <genClasses ecoreClass="model.ecore#//ColumnAlias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ColumnAlias/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//TableAlias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//TableAlias/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//Condition">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Condition/booleanoperation"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Comparison">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Comparison/lhs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Comparison/rhs"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Comparison/comparisonoperator"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//Existence">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Existence/select"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Exists"/>
+    <genClasses ecoreClass="model.ecore#//NotExists"/>
+  </genPackages>
+</genmodel:GenModel>

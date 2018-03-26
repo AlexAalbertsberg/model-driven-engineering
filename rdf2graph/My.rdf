@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.example.org/rdf">
+  <resource xsi:type="rdf:Class" ID="Museum"/>
+  <resource xsi:type="rdf:Class" ID="Musée Le Louvre">
+    <type class="//@resource.0"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Painting"/>
+  <resource xsi:type="rdf:Class" ID="Mona Lisa">
+    <type class="//@resource.2"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Raft of the Medusa">
+    <type class="//@resource.2"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Person"/>
+  <resource xsi:type="rdf:Class" ID="Théodore Géricault">
+    <type class="//@resource.5"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Leonardo Da Vinci">
+    <type class="//@resource.5"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Bob">
+    <type class="//@resource.5"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Alice">
+    <type class="//@resource.5"/>
+  </resource>
+  <resource xsi:type="rdf:Class" ID="Statue"/>
+  <resource xsi:type="rdf:Property" ID="is a friend of"/>
+  <resource xsi:type="rdf:Property" ID="is interested in" IRI=""/>
+  <resource xsi:type="rdf:Property" ID="is painted by"/>
+  <resource xsi:type="rdf:Property" ID="owns the painting"/>
+  <resource xsi:type="rdf:Property" ID="works for"/>
+  <resource xsi:type="rdf:Statement" ID="Musée Le Louvre owns the painting Mona Lisa" IRI="" subject="//@resource.1" predicate="//@resource.14" object="//@resource.3"/>
+  <resource xsi:type="rdf:Statement" ID="Musée Le Louvre owns the painting Raft of the Medusa" subject="//@resource.1" predicate="//@resource.14" object="//@resource.4"/>
+  <resource xsi:type="rdf:Statement" ID="Mona Lisa is painted by Leonardo Da Vinci" IRI="" subject="//@resource.3" predicate="//@resource.13" object="//@resource.7"/>
+  <resource xsi:type="rdf:Statement" ID="Raft of the Medusa is painted by Théodore Géricault" IRI="" subject="//@resource.4" predicate="//@resource.13" object="//@resource.6"/>
+  <resource xsi:type="rdf:Statement" ID="Bob is interested in Mona Lisa" IRI="" subject="//@resource.8" predicate="//@resource.12" object="//@resource.3"/>
+  <resource xsi:type="rdf:Statement" ID="Bob is friend of Alice" IRI="" subject="//@resource.8" predicate="//@resource.11" object="//@resource.9"/>
+  <resource xsi:type="rdf:Statement" ID="Alice works for Musée Le Louvre" subject="//@resource.9" predicate="//@resource.15" object="//@resource.1"/>
+</rdf:RDF>

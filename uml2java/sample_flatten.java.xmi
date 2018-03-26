@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Java:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Java="uri:Java.ecore" name="Sample">
+  <content xsi:type="Java:Class" name="Student">
+    <field name="name" isPrivate="true"/>
+    <method name="getname" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="name"/>
+    </method>
+    <method name="setname" isPublic="true">
+      <parameters name="name"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="name" variableExpr="name"/>
+    </method>
+  </content>
+  <content xsi:type="Java:Class" name="Employee">
+    <field name="name" isPrivate="true"/>
+    <field name="employer" isPrivate="true"/>
+    <method name="getname" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="name"/>
+    </method>
+    <method name="getemployer" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="employer"/>
+    </method>
+    <method name="setname" isPublic="true">
+      <parameters name="name"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="name" variableExpr="name"/>
+    </method>
+    <method name="setemployer" isPublic="true">
+      <parameters name="employer"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="employer" variableExpr="employer"/>
+    </method>
+  </content>
+  <content xsi:type="Java:Class" name="Faculty">
+    <field name="name" isPrivate="true"/>
+    <field name="address" isPrivate="true"/>
+    <field name="university" isPrivate="true"/>
+    <method name="getname" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="name"/>
+    </method>
+    <method name="getaddress" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="address"/>
+    </method>
+    <method name="getuniversity" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="university"/>
+    </method>
+    <method name="setname" isPublic="true">
+      <parameters name="name"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="name" variableExpr="name"/>
+    </method>
+    <method name="setaddress" isPublic="true">
+      <parameters name="address"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="address" variableExpr="address"/>
+    </method>
+    <method name="setuniversity" isPublic="true">
+      <parameters name="university"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="university" variableExpr="university"/>
+    </method>
+  </content>
+  <content xsi:type="Java:Class" name="Company">
+    <field name="name" isPrivate="true"/>
+    <field name="address" isPrivate="true"/>
+    <field name="type" isPrivate="true"/>
+    <method name="getname" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="name"/>
+    </method>
+    <method name="getaddress" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="address"/>
+    </method>
+    <method name="gettype" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="type"/>
+    </method>
+    <method name="setname" isPublic="true">
+      <parameters name="name"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="name" variableExpr="name"/>
+    </method>
+    <method name="setaddress" isPublic="true">
+      <parameters name="address"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="address" variableExpr="address"/>
+    </method>
+    <method name="settype" isPublic="true">
+      <parameters name="type"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="type" variableExpr="type"/>
+    </method>
+  </content>
+  <content xsi:type="Java:Class" name="Address">
+    <field name="city" isPrivate="true"/>
+    <field name="street" isPrivate="true"/>
+    <field name="postcode" isPrivate="true"/>
+    <method name="getcity" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="city"/>
+    </method>
+    <method name="getstreet" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="street"/>
+    </method>
+    <method name="getpostcode" isPublic="true">
+      <statements xsi:type="Java:Return" objectId="this" fieldName="postcode"/>
+    </method>
+    <method name="setcity" isPublic="true">
+      <parameters name="city"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="city" variableExpr="city"/>
+    </method>
+    <method name="setstreet" isPublic="true">
+      <parameters name="street"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="street" variableExpr="street"/>
+    </method>
+    <method name="setpostcode" isPublic="true">
+      <parameters name="postcode"/>
+      <statements xsi:type="Java:Assignment" objectId="this" fieldName="postcode" variableExpr="postcode"/>
+    </method>
+  </content>
+</Java:Package>

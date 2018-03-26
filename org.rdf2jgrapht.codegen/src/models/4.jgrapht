@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ll:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ll="jgrapht" xsi:schemaLocation = "jgrapht jgrapht.ecore">
+  <vertices name="Person"/>
+  <vertices name="Alice"/>
+  <vertices name="Alex"/>
+  <vertices name="Aisha"/>
+  <vertices name="Alfred"/>
+  <vertices name="Amanda"/>
+  <vertices name="Amelia"/>
+  <vertices name="Arthur"/>
+  <vertices name="Barend"/>
+  <vertices name="Bianca"/>
+  <vertices name="Birgit"/>
+  <vertices name="Bob"/>
+  <vertices name="Carl"/>
+  <vertices name="Carmen"/>
+  <vertices name="Carolina"/>
+  <vertices name="Catrina"/>
+  <vertices name="Chris"/>
+  <vertices name="Daan"/>
+  <vertices name="Daisy"/>
+  <vertices name="Danielle"/>
+  <vertices name="Daphne"/>
+  <vertices name="David"/>
+  <vertices name="Elisa"/>
+  <vertices name="Elsie"/>
+  <vertices name="Emma"/>
+  <vertices name="Eric"/>
+  <vertices name="Fabian"/>
+  <vertices name="Fedrico"/>
+  <vertices name="Femke"/>
+  <vertices name="Fleur"/>
+  <vertices name="Frank"/>
+  <vertices name="Garry"/>
+  <vertices name="Gerda"/>
+  <vertices name="Gert"/>
+  <vertices name="Hendrik"/>
+  <vertices name="Henk"/>
+  <vertices name="Ian"/>
+  <vertices name="Ida"/>
+  <vertices name="Iris"/>
+  <vertices name="Jack"/>
+  <vertices name="Jade"/>
+  <vertices name="Joel"/>
+  <vertices name="Johan"/>
+  <vertices name="Joshua"/>
+  <vertices name="Kate"/>
+  <vertices name="Kim"/>
+  <vertices name="Lars"/>
+  <vertices name="Leonardo"/>
+  <vertices name="Leonie"/>
+  <vertices name="Lindsey"/>
+  <vertices name="Mabel"/>
+  <vertices name="Marit"/>
+  <vertices name="Mark"/>
+  <vertices name="Max"/>
+  <vertices name="Mia"/>
+  <vertices name="Muhammad"/>
+  <vertices name="Nadine"/>
+  <vertices name="Nico"/>
+  <vertices name="Nicole"/>
+  <vertices name="Oliver"/>
+  <vertices name="Oscar"/>
+  <vertices name="Phoebe"/>
+  <vertices name="Poppy"/>
+  <vertices name="Ronnie"/>
+  <vertices name="Rosie"/>
+  <vertices name="Ruby"/>
+  <vertices name="Sebastian"/>
+  <vertices name="Sienna"/>
+  <vertices name="Sophia"/>
+  <vertices name="Sophie"/>
+  <vertices name="Theo"/>
+  <vertices name="Thomas"/>
+  <vertices name="Tyler"/>
+  <vertices name="Violet"/>
+  <vertices name="William"/>
+  <vertices name="Willow"/>
+  <vertices name="Zachary"/>
+  <vertices name="Zoe"/>
+  <vertices name="is a friend of"/>
+  <edges from="//@vertices.1" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.2" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.3" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.4" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.5" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.6" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.7" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.8" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.9" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.10" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.11" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.12" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.13" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.14" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.15" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.16" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.17" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.18" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.19" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.20" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.21" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.22" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.23" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.24" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.25" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.26" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.27" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.28" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.29" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.30" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.31" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.32" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.33" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.34" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.35" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.36" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.37" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.38" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.39" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.40" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.41" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.42" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.43" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.44" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.45" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.46" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.47" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.48" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.49" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.50" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.51" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.52" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.53" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.54" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.55" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.56" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.57" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.58" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.59" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.60" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.61" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.62" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.63" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.64" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.65" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.66" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.67" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.68" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.69" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.70" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.71" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.72" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.73" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.74" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.75" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.76" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.77" to="//@vertices.0" relation="type"/>
+  <edges from="//@vertices.3" to="//@vertices.34" relation="is a friend of"/>
+  <edges from="//@vertices.3" to="//@vertices.43" relation="is a friend of"/>
+  <edges from="//@vertices.2" to="//@vertices.25" relation="is a friend of"/>
+  <edges from="//@vertices.2" to="//@vertices.60" relation="is a friend of"/>
+  <edges from="//@vertices.4" to="//@vertices.11" relation="is a friend of"/>
+  <edges from="//@vertices.4" to="//@vertices.66" relation="is a friend of"/>
+  <edges from="//@vertices.4" to="//@vertices.12" relation="is a friend of"/>
+  <edges from="//@vertices.4" to="//@vertices.66" relation="is a friend of"/>
+  <edges from="//@vertices.6" to="//@vertices.5" relation="is a friend of"/>
+  <edges from="//@vertices.7" to="//@vertices.60" relation="is a friend of"/>
+  <edges from="//@vertices.7" to="//@vertices.72" relation="is a friend of"/>
+  <edges from="//@vertices.7" to="//@vertices.76" relation="is a friend of"/>
+  <edges from="//@vertices.8" to="//@vertices.68" relation="is a friend of"/>
+  <edges from="//@vertices.9" to="//@vertices.15" relation="is a friend of"/>
+  <edges from="//@vertices.10" to="//@vertices.39" relation="is a friend of"/>
+  <edges from="//@vertices.11" to="//@vertices.4" relation="is a friend of"/>
+  <edges from="//@vertices.12" to="//@vertices.14" relation="is a friend of"/>
+  <edges from="//@vertices.13" to="//@vertices.9" relation="is a friend of"/>
+  <edges from="//@vertices.13" to="//@vertices.15" relation="is a friend of"/>
+  <edges from="//@vertices.13" to="//@vertices.65" relation="is a friend of"/>
+  <edges from="//@vertices.14" to="//@vertices.30" relation="is a friend of"/>
+  <edges from="//@vertices.15" to="//@vertices.55" relation="is a friend of"/>
+  <edges from="//@vertices.16" to="//@vertices.45" relation="is a friend of"/>
+  <edges from="//@vertices.16" to="//@vertices.56" relation="is a friend of"/>
+  <edges from="//@vertices.17" to="//@vertices.27" relation="is a friend of"/>
+  <edges from="//@vertices.17" to="//@vertices.32" relation="is a friend of"/>
+  <edges from="//@vertices.17" to="//@vertices.69" relation="is a friend of"/>
+  <edges from="//@vertices.18" to="//@vertices.70" relation="is a friend of"/>
+  <edges from="//@vertices.19" to="//@vertices.5" relation="is a friend of"/>
+  <edges from="//@vertices.20" to="//@vertices.48" relation="is a friend of"/>
+  <edges from="//@vertices.20" to="//@vertices.55" relation="is a friend of"/>
+  <edges from="//@vertices.21" to="//@vertices.18" relation="is a friend of"/>
+  <edges from="//@vertices.21" to="//@vertices.60" relation="is a friend of"/>
+  <edges from="//@vertices.22" to="//@vertices.19" relation="is a friend of"/>
+  <edges from="//@vertices.22" to="//@vertices.35" relation="is a friend of"/>
+  <edges from="//@vertices.22" to="//@vertices.13" relation="is a friend of"/>
+  <edges from="//@vertices.23" to="//@vertices.46" relation="is a friend of"/>
+  <edges from="//@vertices.24" to="//@vertices.2" relation="is a friend of"/>
+  <edges from="//@vertices.25" to="//@vertices.18" relation="is a friend of"/>
+  <edges from="//@vertices.26" to="//@vertices.44" relation="is a friend of"/>
+  <edges from="//@vertices.27" to="//@vertices.37" relation="is a friend of"/>
+  <edges from="//@vertices.28" to="//@vertices.45" relation="is a friend of"/>
+  <edges from="//@vertices.28" to="//@vertices.60" relation="is a friend of"/>
+  <edges from="//@vertices.29" to="//@vertices.54" relation="is a friend of"/>
+  <edges from="//@vertices.30" to="//@vertices.56" relation="is a friend of"/>
+  <edges from="//@vertices.30" to="//@vertices.63" relation="is a friend of"/>
+  <edges from="//@vertices.31" to="//@vertices.4" relation="is a friend of"/>
+  <edges from="//@vertices.31" to="//@vertices.35" relation="is a friend of"/>
+  <edges from="//@vertices.32" to="//@vertices.36" relation="is a friend of"/>
+  <edges from="//@vertices.33" to="//@vertices.4" relation="is a friend of"/>
+  <edges from="//@vertices.33" to="//@vertices.28" relation="is a friend of"/>
+  <edges from="//@vertices.33" to="//@vertices.31" relation="is a friend of"/>
+  <edges from="//@vertices.34" to="//@vertices.7" relation="is a friend of"/>
+  <edges from="//@vertices.35" to="//@vertices.64" relation="is a friend of"/>
+  <edges from="//@vertices.36" to="//@vertices.47" relation="is a friend of"/>
+  <edges from="//@vertices.38" to="//@vertices.21" relation="is a friend of"/>
+  <edges from="//@vertices.38" to="//@vertices.48" relation="is a friend of"/>
+  <edges from="//@vertices.39" to="//@vertices.22" relation="is a friend of"/>
+  <edges from="//@vertices.40" to="//@vertices.32" relation="is a friend of"/>
+  <edges from="//@vertices.41" to="//@vertices.19" relation="is a friend of"/>
+  <edges from="//@vertices.41" to="//@vertices.38" relation="is a friend of"/>
+  <edges from="//@vertices.42" to="//@vertices.46" relation="is a friend of"/>
+  <edges from="//@vertices.42" to="//@vertices.52" relation="is a friend of"/>
+  <edges from="//@vertices.43" to="//@vertices.52" relation="is a friend of"/>
+  <edges from="//@vertices.43" to="//@vertices.67" relation="is a friend of"/>
+  <edges from="//@vertices.46" to="//@vertices.38" relation="is a friend of"/>
+  <edges from="//@vertices.46" to="//@vertices.61" relation="is a friend of"/>
+  <edges from="//@vertices.47" to="//@vertices.30" relation="is a friend of"/>
+  <edges from="//@vertices.48" to="//@vertices.62" relation="is a friend of"/>
+  <edges from="//@vertices.50" to="//@vertices.47" relation="is a friend of"/>
+  <edges from="//@vertices.50" to="//@vertices.62" relation="is a friend of"/>
+  <edges from="//@vertices.51" to="//@vertices.61" relation="is a friend of"/>
+  <edges from="//@vertices.52" to="//@vertices.8" relation="is a friend of"/>
+  <edges from="//@vertices.52" to="//@vertices.10" relation="is a friend of"/>
+  <edges from="//@vertices.52" to="//@vertices.53" relation="is a friend of"/>
+  <edges from="//@vertices.53" to="//@vertices.49" relation="is a friend of"/>
+  <edges from="//@vertices.57" to="//@vertices.5" relation="is a friend of"/>
+  <edges from="//@vertices.58" to="//@vertices.54" relation="is a friend of"/>
+  <edges from="//@vertices.59" to="//@vertices.3" relation="is a friend of"/>
+  <edges from="//@vertices.59" to="//@vertices.16" relation="is a friend of"/>
+  <edges from="//@vertices.62" to="//@vertices.36" relation="is a friend of"/>
+  <edges from="//@vertices.63" to="//@vertices.7" relation="is a friend of"/>
+  <edges from="//@vertices.63" to="//@vertices.47" relation="is a friend of"/>
+  <edges from="//@vertices.63" to="//@vertices.69" relation="is a friend of"/>
+  <edges from="//@vertices.64" to="//@vertices.3" relation="is a friend of"/>
+  <edges from="//@vertices.64" to="//@vertices.34" relation="is a friend of"/>
+  <edges from="//@vertices.64" to="//@vertices.74" relation="is a friend of"/>
+  <edges from="//@vertices.65" to="//@vertices.20" relation="is a friend of"/>
+  <edges from="//@vertices.66" to="//@vertices.12" relation="is a friend of"/>
+  <edges from="//@vertices.66" to="//@vertices.75" relation="is a friend of"/>
+  <edges from="//@vertices.67" to="//@vertices.9" relation="is a friend of"/>
+  <edges from="//@vertices.69" to="//@vertices.31" relation="is a friend of"/>
+  <edges from="//@vertices.70" to="//@vertices.21" relation="is a friend of"/>
+  <edges from="//@vertices.70" to="//@vertices.60" relation="is a friend of"/>
+  <edges from="//@vertices.71" to="//@vertices.58" relation="is a friend of"/>
+  <edges from="//@vertices.72" to="//@vertices.57" relation="is a friend of"/>
+  <edges from="//@vertices.72" to="//@vertices.59" relation="is a friend of"/>
+  <edges from="//@vertices.72" to="//@vertices.71" relation="is a friend of"/>
+  <edges from="//@vertices.73" to="//@vertices.12" relation="is a friend of"/>
+  <edges from="//@vertices.73" to="//@vertices.15" relation="is a friend of"/>
+  <edges from="//@vertices.74" to="//@vertices.21" relation="is a friend of"/>
+  <edges from="//@vertices.74" to="//@vertices.70" relation="is a friend of"/>
+  <edges from="//@vertices.75" to="//@vertices.9" relation="is a friend of"/>
+  <edges from="//@vertices.75" to="//@vertices.15" relation="is a friend of"/>
+  <edges from="//@vertices.76" to="//@vertices.77" relation="is a friend of"/>
+  <edges from="//@vertices.77" to="//@vertices.49" relation="is a friend of"/>
+</ll:Graph>
